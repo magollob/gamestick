@@ -1,0 +1,279 @@
+/* Estilos para o player de vídeo personalizado */
+.video-progress {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: height 0.2s ease;
+  cursor: pointer;
+}
+
+.video-progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ff7a00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 122, 0, 0.3);
+}
+
+.video-progress::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #ff7a00;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(255, 122, 0, 0.3);
+}
+
+.video-progress:hover {
+  height: 6px;
+}
+
+.video-progress:hover::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.video-progress:hover::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+}
+
+/* Controle de volume */
+.volume-slider {
+  appearance: none;
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ff7a00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(255, 122, 0, 0.3);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ff7a00;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(255, 122, 0, 0.3);
+}
+
+.volume-slider:hover {
+  height: 4px;
+}
+
+.volume-slider:hover::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+}
+
+.volume-slider:hover::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+}
+
+/* Botões de controle */
+.video-control-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-control-button:hover {
+  background: rgba(255, 122, 0, 0.8);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
+}
+
+.video-control-button:active {
+  transform: scale(0.95);
+}
+
+/* Botão principal de play */
+.main-play-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 122, 0, 0.9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.4);
+}
+
+.main-play-button:hover {
+  background: rgba(255, 122, 0, 1);
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(255, 122, 0, 0.5);
+}
+
+.main-play-button:active {
+  transform: scale(0.95);
+}
+
+/* Controles de tempo */
+.video-time-display {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Barras de título e controles */
+.video-title-bar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  padding: 16px 20px;
+}
+
+.video-controls-bar {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 16px 20px;
+}
+
+/* Container de volume */
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.volume-container:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 122, 0, 0.3);
+}
+
+/* Grupo de controles */
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.controls-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.controls-fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .video-control-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .main-play-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .volume-slider {
+    width: 50px;
+  }
+
+  .video-time-display {
+    font-size: 12px;
+  }
+
+  .controls-group {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .volume-container {
+    padding: 6px 10px;
+  }
+}
+
+/* Indicador de buffer */
+.buffer-indicator {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 122, 0, 0.3);
+}
+
+/* Efeito de hover no container do player */
+.player-container:hover .video-progress {
+  height: 6px;
+}
+
+.player-container:hover .volume-slider {
+  height: 4px;
+}
